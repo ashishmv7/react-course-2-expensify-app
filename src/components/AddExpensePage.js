@@ -31,7 +31,7 @@ export class AddExpensePage extends React.Component{
     // </div>)
     const mapDispatchToProps =(dispatch)=>{
         return {
-                onExpense:(expense)=>dispatch(addExpense(expense))
+                addExpense:(expense)=>dispatch(addExpense(expense))
         }
     }
     export default connect(undefined,mapDispatchToProps)(AddExpensePage)
