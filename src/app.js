@@ -15,13 +15,10 @@ const store = configureStore()
 store.subscribe(() => {
     const state = store.getState()
     const visibleExpneses = getVisibileExpenses(state.expenses, state.filterReducer)
-    console.log(visibleExpneses)
+    
 })
 
-const expensetwo1 = store.dispatch(addExpense({ description: 'fuel bill', amount: 70, createdAt: 1000 }))
 
-const expensetwo = store.dispatch(addExpense({ description: 'service bill', amount: 700, createdAt: 1000 }))
-const expensethree = store.dispatch(addExpense({ description: 'water bill', amount: 650, createdAt: 750 }))
 
 store.dispatch(setTextFilter(''))
 const jsx = (
